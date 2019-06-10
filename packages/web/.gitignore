@@ -1,0 +1,6 @@
+/src/.next
+/node_modules/
+/build/
+*.log
+dist/
+/flow-typed/
