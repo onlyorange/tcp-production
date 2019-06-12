@@ -1,5 +1,7 @@
 {
   "name": "root",
+  "version": "1.0.0",
+  "description": "Adding sample description",
   "private": true,
   "scripts": {
     "clean": "yarn cleanup && yarn lerna-clean",
@@ -78,6 +80,49 @@
     "stylelint-formatter-pretty": "^1.0.3",
     "stylelint-processor-styled-components": "^1.5.1"
   },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "mobileapp/react-native",
+      "mobileapp/react-native/**",
+      "mobileapp/react-redux",
+      "mobileapp/react-redux/**",
+      "mobileapp/redux",
+      "mobileapp/redux/**",
+      "mobileapp/redux-saga",
+      "mobileapp/redux-saga/**",
+      "mobileapp/styled-components",
+      "mobileapp/styled-components/**",
+      "mobileapp/react-native-gesture-handler",
+      "mobileapp/react-native-gesture-handler/**",
+      "mobileapp/react-navigation",
+      "mobileapp/react-navigation/**",
+      "mobileapp/react-native-render-html",
+      "mobileapp/react-native-render-html/**",
+      "mobileapp/react-apollo",
+      "mobileapp/react-apollo/**",
+      "mobileapp/aws-appsync",
+      "mobileapp/aws-appsync/**",
+      "mobileapp/aws-appsync-react",
+      "mobileapp/aws-appsync-react/**",
+      "mobileapp/graphql",
+      "mobileapp/graphql/**",
+      "mobileapp/graphql-tag",
+      "mobileapp/graphql-tag/**",
+      "mobileapp/apisauce",
+      "mobileapp/apisauce/**",
+      "mobileapp/apollo-client",
+      "mobileapp/apollo-client/**"
+    ]
+  },
+  "dependencies": {
+    "@svgr/webpack": "^4.3.0",
+    "cross-env": "^5.2.0",
+    "dotenv": "^8.0.0",
+    "react-slick": "^0.24.0"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -95,45 +140,5 @@
       "stylelint"
     ],
     "*.css": "stylelint"
-  },
-  "workspaces": {
-    "packages": ["packages/*"],
-    "nohoist": ["mobileapp/react-native", 
-                "mobileapp/react-native/**",
-                "mobileapp/react-redux", 
-                "mobileapp/react-redux/**", 
-                "mobileapp/redux",
-                "mobileapp/redux/**", 
-                "mobileapp/redux-saga",
-                "mobileapp/redux-saga/**",
-                "mobileapp/styled-components",
-                "mobileapp/styled-components/**",
-                "mobileapp/react-native-gesture-handler",
-                "mobileapp/react-native-gesture-handler/**",
-                "mobileapp/react-navigation",
-                "mobileapp/react-navigation/**",
-                "mobileapp/react-native-render-html",
-                "mobileapp/react-native-render-html/**",
-                "mobileapp/react-apollo",
-                "mobileapp/react-apollo/**",
-                "mobileapp/aws-appsync",
-                "mobileapp/aws-appsync/**",
-                "mobileapp/aws-appsync-react",
-                "mobileapp/aws-appsync-react/**",
-                "mobileapp/graphql",
-                "mobileapp/graphql/**",
-                "mobileapp/graphql-tag",
-                "mobileapp/graphql-tag/**",
-                "mobileapp/apisauce",
-                "mobileapp/apisauce/**",
-                "mobileapp/apollo-client",
-                "mobileapp/apollo-client/**"
-              ]
-  },
-  "dependencies": {
-    "@svgr/webpack": "^4.3.0",
-    "cross-env": "^5.2.0",
-    "dotenv": "^8.0.0",
-    "react-slick": "^0.24.0"
   }
 }
