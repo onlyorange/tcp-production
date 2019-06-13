@@ -1,4 +1,4 @@
-export const HOME_CONSTANTS = {
+export const HOMEPAGE_CONSTANTS = {
     FETCH_HEADER_LINKS: "FETCH_HEADER_LINKS", //TODO: Move it to _APP.js Constants
     SET_HEADER_LINKS: "ADD_HEADER_LINKS",
     FETCH_ESPOT: "FETCH_ESPOT",

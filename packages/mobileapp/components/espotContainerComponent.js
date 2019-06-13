@@ -2,6 +2,8 @@ import React from 'react';
 import {
   WebView,
 } from 'react-native';
+import fetchData  from '@tcp/core/src/service/API';
+import { endpoints } from '@tcp/core/src/service/endpoint';
 import HTML from 'react-native-render-html';
 
 export class EspotContainer extends React.Component {
@@ -13,22 +15,26 @@ export class EspotContainer extends React.Component {
     }
 
     componentDidMount = () => {
-        fetch("https://test2.childrensplace.com/api/getESpot", {
-            method: 'get',
-            headers: {
-                "espotname": "LOYAL_MiniBagMSpot",
-                "catalogid": 10551,
-                "langid": -1,
-                "storeid": 10151,
-                "devicetype": "app"
-              },
-        }).then((res)=> res.json()).then(res => {
-          console.log(res.List[0].maketingText);
-          this.setState({
-            data: res.List[0].maketingText
-          });
-        })
-      .catch(err => {
+      fetchData("https://test2.childrensplace.com","/api/getESpot", {
+        method: 'get',
+        'espotname': 'LOYAL_MiniBagMSpot',
+        'catalogId':10551,
+        'langId': -1,
+        'storeId':10151,
+        'devicetype':'desktop',
+        header: {
+          espotName: 'LOYAL_MiniBagMSpot',
+          deviceType: 'desktop',
+          type: 'content',
+          'Cache-Control': 'no-store, must-revalidate',
+          Pragma: 'no-cache',
+          Expires: 0
+        },
+      }, 'get').then((res)=> {
+        this.setState({
+          data: res.body.List[0].maketingText
+        });
+      }).catch(err => {
         console.log("Error in API");
         console.log(err);
       });
