@@ -1,6 +1,8 @@
 {
   "name": "root",
   "private": true,
+  "version": "0.1.0",
+  "description": "Adding sample description",
   "scripts": {
     "stash": "rm -rf node_modules/ packages/*/node_modules/ packages/*/yarn.lock yarn.lock",
     "clean": "yarn cleanup && yarn lerna-clean",
@@ -135,8 +137,7 @@
       "core/superagent",
       "core/superagent/**",
       "mobileapp/superagent",
-      "mobileapp/superagent/**",
-      "mobileapp/@tcp/core"
+      "mobileapp/superagent/**"
     ]
   },
   "dependencies": {
