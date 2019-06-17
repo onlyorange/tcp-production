@@ -1,3 +1,4 @@
+// @flow
 // Basic file for column in the grid structure
 import React from 'react';
 import { PropTypes } from 'prop-types';
@@ -15,6 +16,11 @@ Col.propTypes = {
     medium: PropTypes.number,
     large: PropTypes.number,
   }),
+  hideCol: PropTypes.shape({
+    small: PropTypes.bool,
+    medium: PropTypes.bool,
+    large: PropTypes.bool,
+  }),
 };
 
 Col.defaultProps = {
@@ -22,6 +28,11 @@ Col.defaultProps = {
     small: 6,
     medium: 8,
     large: 12,
+  },
+  hideCol: {
+    small: true,
+    medium: false,
+    large: false,
   },
 };
 

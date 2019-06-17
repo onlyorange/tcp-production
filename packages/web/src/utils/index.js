@@ -1,1 +1,1 @@
-// index.js
+export { default, getIconPath, getLocator } from './utils';

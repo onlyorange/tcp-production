@@ -2,8 +2,8 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 // eslint-disable-next-line
 import Link from 'next/link';
-import { buildUrl } from '@tcp/core/src/utils/url';
-import withStyles from '@tcp/core/src/components/common/hoc/withStyles';
+import { buildUrl } from '../../../../../utils/url';
+import withStyles from '../../../hoc/withStyles';
 
 import styles from '../Anchor.style';
 
@@ -34,8 +34,8 @@ const Anchor = ({
     <a
       href={buildUrl(to)}
       className={className}
-      onClick={handleLinkClick}
       {...other}
+      onClick={handleLinkClick}
       title={title}
       target={target}
     >
@@ -43,7 +43,7 @@ const Anchor = ({
     </a>
   ) : (
     <Link href={to} as={as} shallow={shallow} scroll={scroll}>
-      <a href={as || buildUrl(to)} className={className} title={title}>
+      <a href={as || buildUrl(to)} className={className} title={title} target={target} {...other}>
         {children}
       </a>
     </Link>

@@ -27,6 +27,7 @@ export default {
     DARKGRAY: '#575757',
     GRAY: '#9b9b9b',
     LIGHTGRAY: '#d8d8d8',
+    DARKERGRAY: '#595959',
     BLUE: '#2e6a91',
     DARKERBLUE: '#439ad4',
     RED: '#c84747',
@@ -42,6 +43,7 @@ export default {
   BUTTON_HOVER: 'rgba(24, 24, 24, 0.8)',
   COUNT_ICON_DISABLE: 'rgba(0, 0, 0, 0.3)',
   EMPTY_CART_BOX: 'rgba(0, 0, 0, 0.07)',
+  MODAL_OVERLAY: 'rgba(0, 0, 0, 0.6)',
   BUTTON: {
     NORMAL: '#ffffff',
     BORDER: '#979797',
@@ -62,5 +64,14 @@ export default {
     FOCUS_BORDER: '#439ad4',
     ERROR_BORDER: '#c84747',
     SUCCESS_BORDER: '#6dc927',
+  },
+  ACCORDION: {
+    INACTIVE_HEADER: '#e5e5e5',
+    ACTIVE_HEADER: '#f7f7f7',
+    COLLAPSE_EXPAND_ICON: '#9b9b9b',
+    TEXT: '#1a1a1a',
+  },
+  FOOTER: {
+    DIVIDER: '#c3c3c3',
   },
 };

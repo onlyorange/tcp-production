@@ -6,10 +6,17 @@ const StyledRow = css`
       key => `
     @media ${props.theme.mediaQuery[key]} {
       ${
-        !props.inline_block
+        !props.noFlex
           ? `
         display: flex;
         flex-wrap: wrap;
+        `
+          : ``
+      }
+      ${
+        props.centered
+          ? `
+        justify-content: center;
         `
           : ``
       }
@@ -21,8 +28,10 @@ const StyledRow = css`
         width: calc(100% - ${props.theme.gridDimensions.gridOffsetObj[key] * 2}px);
         `
           : `width: 100%;`
-      }`
+      }
+    }`
     )}
+
   div:last-child {
     padding-right: 0;
   }

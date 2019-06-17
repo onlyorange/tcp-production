@@ -1,94 +1,24 @@
 import React, { Fragment } from 'react';
-import Row from '@tcp/core/src/components/common/atoms/Row';
-import Col from '@tcp/core/src/components/common/atoms/Col';
-import Grid from '@tcp/core/src/components/common/molecules/Grid';
-import Button from '@tcp/core/src/components/common/atoms/Button';
-import Anchor from '@tcp/core/src/components/common/atoms/Anchor';
-import RichText from '@tcp/core/src/components/common/atoms/RichText';
-import CarouselConfig from '@tcp/web/config';
-import { PropTypes } from 'prop-types';
-import TextBox from '@tcp/core/src/components/common/atoms/TextBox';
+import errorBoundary from '@tcp/core/src/components/common/hoc/errorBoundary';
+import Image from '@tcp/core/src/components/common/atoms/Image';
+import ModuleD from '../../../../common/organisms/ModuleD';
 
-import { NavBar, SampleCarousel, Test } from '../molecules';
+const HomePageView = data => {
+  const layoutItems = data.layout.layout.val.layout;
 
-// colCount is the number of columns the component needs to cover in each of the viewport
-const colSize = {
-  small: 1,
-  medium: 1,
-  large: 1,
+  return (
+    <Fragment>
+      <Image src="/static/images/hero.png" />
+      {layoutItems.val.map(item => (
+        <Fragment>
+          {item.val.typ === 'module' && item.val.sub === 'moduleA' ? <div>module A</div> : ''}
+          {item.val.typ === 'module' && item.val.sub === 'moduleB' ? <div>module B</div> : ''}
+          {item.val.typ === 'module' && item.val.sub === 'moduleD' ? <ModuleD /> : ''}
+          {item.val.typ === 'module' && item.val.sub === 'moduleK' ? <div>module K</div> : ''}
+        </Fragment>
+      ))}
+    </Fragment>
+  );
 };
 
-const colSize1 = {
-  small: 1,
-  medium: 1,
-  large: 1,
-};
-
-const colSize2 = {
-  small: 1,
-  medium: 1,
-  large: 1,
-};
-
-const randomHTML = '<button class="asdfasdf" type="button">test133</button>';
-const HomePageView = ({ links }) => (
-  <Fragment>
-    <NavBar links={links} />
-    <Test className="test" />
-    <Grid>
-      <Row>
-        <Col colSize={colSize}>
-          <Button buttonVariation="fixed-width">test</Button>
-        </Col>
-        <Col colSize={colSize}>
-          <Button buttonVariation="variable-width">test1</Button>
-        </Col>
-        <Col colSize={colSize}>
-          <Button buttonVariation="fixed-width" fullWidth>
-            test
-          </Button>
-        </Col>
-        <Col colSize={colSize1}>
-          <Anchor to="/to" anchorVariation="primary" fontSizeVariation="large" noLink="false">
-            ABCD
-          </Anchor>
-        </Col>
-        <Col colSize={colSize2}>Random line5 takes 1 col in desktop</Col>
-        <Col colSize={colSize}>
-          <RichText richTextHtml={randomHTML} />
-        </Col>
-        <Col
-          colSize={{
-            small: 1,
-            medium: 1,
-            large: 3,
-          }}
-        >
-          <TextBox id="abcd" name="abcdee" textIcon="icon-sms" />
-        </Col>
-        <Col colSize={colSize}>
-          <Button buttonVariation="fixed-width">test</Button>
-        </Col>
-        <Col colSize={colSize}>
-          <Button buttonVariation="fixed-width">test</Button>
-        </Col>
-        <Col colSize={colSize}>
-          <Button buttonVariation="fixed-width">test</Button>
-        </Col>
-        <Col colSize={colSize}>
-          <Button buttonVariation="fixed-width">test</Button>
-        </Col>
-        <Col colSize={colSize}>
-          <Button buttonVariation="fixed-width">test</Button>
-        </Col>
-      </Row>
-    </Grid>
-    <SampleCarousel props={CarouselConfig.CAROUSEL_OPTIONS} />
-  </Fragment>
-);
-
-HomePageView.propTypes = {
-  links: PropTypes.arrayOf.isRequired,
-};
-
-export default HomePageView;
+export default errorBoundary(HomePageView);
