@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 const AccordionHeaderStyles = css`
   font-family: ${props => props.theme.fonts.secondaryFontFamily};

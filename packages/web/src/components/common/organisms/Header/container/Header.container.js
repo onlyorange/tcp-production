@@ -1,9 +1,9 @@
-import { connect } from 'react-redux';
-import HeaderView from '../views';
+import { connect } from "react-redux";
+import HeaderView from "../views";
 
 const mapStateToProps = state => {
   return {
-    headerData: state.HeaderReducer,
+    headerData: state.HeaderReducer
   };
 };
 

@@ -1,1 +1,1 @@
-export { default } from './FooterNavHeader';
+export { default } from "./FooterNavHeader";

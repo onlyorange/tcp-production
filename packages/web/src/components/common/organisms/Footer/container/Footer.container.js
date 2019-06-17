@@ -1,16 +1,16 @@
-import { connect } from 'react-redux';
-import FooterView from '../views';
+import { connect } from "react-redux";
+import FooterView from "../views";
 
 const processFooterMiddle = footerMiddleObj => {
   const formattedFooterMiddleArray = [];
   formattedFooterMiddleArray.push(
     {
       header: footerMiddleObj.mpr.link,
-      links: footerMiddleObj.mpr.sub_links,
+      links: footerMiddleObj.mpr.sub_links
     },
     {
       header: footerMiddleObj.mpr_cc.link,
-      links: footerMiddleObj.mpr_cc.sub_links,
+      links: footerMiddleObj.mpr_cc.sub_links
     }
   );
 
@@ -19,7 +19,7 @@ const processFooterMiddle = footerMiddleObj => {
     formattedFooterMiddleArray.push({
       header: footerMiddleObj.nav_links[i].items[0],
       links: footerMiddleObj.nav_links[i].items[0].links,
-      isSubHeader: footerMiddleObj.nav_links[i].items[0].isSubHeader,
+      isSubHeader: footerMiddleObj.nav_links[i].items[0].isSubHeader
     });
   }
   return formattedFooterMiddleArray;
@@ -32,8 +32,8 @@ const mapStateToProps = state => {
     navLinks: processFooterMiddle(state.FooterReducer.footer_middle),
     socialMediaLinks: {
       connectWithUsLabel: state.GlobalReducers.labels.connect_with_us,
-      links: state.FooterReducer.footer_top.social_media_links,
-    },
+      links: state.FooterReducer.footer_top.social_media_links
+    }
   };
 };
 

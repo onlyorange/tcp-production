@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { getIconPath } from '@tcp/web/src/utils';
+import styled from "styled-components";
+import { getIconPath } from "@tcp/web/src/utils";
 
-const darkArrow = getIconPath('icon-carrot-grey');
-const lightArrow = getIconPath('icon-carrot-white');
+const darkArrow = getIconPath("icon-carrot-grey");
+const lightArrow = getIconPath("icon-carrot-white");
 const CarouselStyle = styled.div`
   .slick-slider {
     position: relative;
@@ -46,7 +46,7 @@ const CarouselStyle = styled.div`
   .slick-track:before,
   .slick-track:after {
     display: table;
-    content: '';
+    content: "";
   }
   .slick-track:after {
     clear: both;
@@ -60,7 +60,7 @@ const CarouselStyle = styled.div`
     height: 100%;
     min-height: 1px;
   }
-  [dir='rtl'] .slick-slide {
+  [dir="rtl"] .slick-slide {
     float: right;
   }
   .slick-slide img {
@@ -109,14 +109,16 @@ const CarouselStyle = styled.div`
   }
   @media only screen and (max-width: 767px) {
     .slick-prev {
-      background: url(${props => (props.carouselTheme === 'dark' ? lightArrow : darkArrow)})
+      background: url(${props =>
+          props.carouselTheme === "dark" ? lightArrow : darkArrow})
         no-repeat center center;
       background-size: 6px 10px;
       height: 10px;
       width: 6px;
     }
     .slick-next {
-      background: url(${props => (props.carouselTheme === 'dark' ? lightArrow : darkArrow)})
+      background: url(${props =>
+          props.carouselTheme === "dark" ? lightArrow : darkArrow})
         no-repeat center center;
       background-size: 6px 10px;
       height: 10px;
@@ -125,11 +127,13 @@ const CarouselStyle = styled.div`
   }
   @media only screen and (min-width: 768px) {
     .slick-prev {
-      background: url(${props => (props.carouselTheme === 'dark' ? lightArrow : darkArrow)})
+      background: url(${props =>
+          props.carouselTheme === "dark" ? lightArrow : darkArrow})
         no-repeat center center;
     }
     .slick-next {
-      background: url(${props => (props.carouselTheme === 'dark' ? lightArrow : darkArrow)})
+      background: url(${props =>
+          props.carouselTheme === "dark" ? lightArrow : darkArrow})
         no-repeat center center;
     }
   }
@@ -138,14 +142,14 @@ const CarouselStyle = styled.div`
     left: 0;
     transform: rotateY(180deg) translate(0, -50%);
   }
-  [dir='rtl'] .slick-prev {
+  [dir="rtl"] .slick-prev {
     right: -20px;
     left: auto;
   }
   .slick-next {
     right: 0;
   }
-  [dir='rtl'] .slick-next {
+  [dir="rtl"] .slick-next {
     right: auto;
     left: -20px;
   }
@@ -197,7 +201,7 @@ const CarouselStyle = styled.div`
     left: 0;
     width: 20px;
     height: 20px;
-    content: '•';
+    content: "•";
     text-align: center;
     opacity: 0.25;
     color: black;

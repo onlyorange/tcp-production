@@ -1,1 +1,1 @@
-export { default } from './PromotionalArea';
+export { default } from "./PromotionalArea";

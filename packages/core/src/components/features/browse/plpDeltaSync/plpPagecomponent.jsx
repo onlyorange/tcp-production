@@ -1,27 +1,27 @@
-import React from 'react';
-import { ApolloProvider, graphql } from 'react-apollo';
-import { Rehydrated } from 'aws-appsync-react';
-import { buildSync } from 'aws-appsync';
-import gql from 'graphql-tag';
-import { ProductList } from './views/productListComponent';
-import * as GQLQueries from '../../../../service/Queries';
+import React from "react";
+import { ApolloProvider, graphql } from "react-apollo";
+import { Rehydrated } from "aws-appsync-react";
+import { buildSync } from "aws-appsync";
+import gql from "graphql-tag";
+import { ProductList } from "./views/productListComponent";
+import * as GQLQueries from "../../../../service/Queries";
 
-import AppSyncClient from '../../../../service/AwsAPI';
+import AppSyncClient from "../../../../service/AwsAPI";
 
 const PlpPageComponent = graphql(gql(GQLQueries.getProductsInList), {
   options: {
-    fetchPolicy: 'cache-only',
+    fetchPolicy: "cache-only"
   },
   props: ({ data }) => ({
-    data: data.getProductsInList || [],
-  }),
+    data: data.getProductsInList || []
+  })
 })(ProductList);
 
 export default class PlpDeltaSyncPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isRenderedOnClient: false,
+      isRenderedOnClient: false
     };
   }
 
@@ -30,16 +30,16 @@ export default class PlpDeltaSyncPage extends React.Component {
 
     this.client.hydrated().then(() =>
       this.client.sync(
-        buildSync('Product', {
+        buildSync("Product", {
           baseQuery: {
-            query: gql(GQLQueries.getProductsInList),
+            query: gql(GQLQueries.getProductsInList)
           },
           subscriptionQuery: {
-            query: gql(GQLQueries.DeltaSubscription),
+            query: gql(GQLQueries.DeltaSubscription)
           },
           deltaQuery: {
-            query: GQLQueries.listDeltaProducts,
-          },
+            query: GQLQueries.listDeltaProducts
+          }
         })
       )
     );

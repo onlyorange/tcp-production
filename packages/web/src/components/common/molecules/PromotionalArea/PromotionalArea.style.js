@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 export default css`
   font-size: ${props => props.theme.fonts.fontSize.body.bodytext.copy1}px;

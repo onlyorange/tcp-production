@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Heading, BodyCopy } from '@tcp/core/styles/themes/TCP/typotheme';
+import { Heading, BodyCopy } from "@tcp/core/styles/themes/TCP/typotheme";
 
 const Test = () => {
   return (

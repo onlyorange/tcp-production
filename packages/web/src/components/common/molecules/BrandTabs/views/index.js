@@ -1,1 +1,1 @@
-export { default } from './BrandTabs';
+export { default } from "./BrandTabs";

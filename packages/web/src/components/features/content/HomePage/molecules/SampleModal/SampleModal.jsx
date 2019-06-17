@@ -1,10 +1,10 @@
-import React from 'react';
-import Modal from '@tcp/core/src/components/common/molecules/Modal';
+import React from "react";
+import Modal from "@tcp/core/src/components/common/molecules/Modal";
 
 const colSize = {
   small: 6,
   medium: 6,
-  large: 8,
+  large: 8
 };
 
 class SampleModal extends React.Component {
@@ -12,7 +12,7 @@ class SampleModal extends React.Component {
     super(props, context);
 
     this.state = {
-      modalIsOpen: false,
+      modalIsOpen: false
     };
 
     this.toggleModal = this.toggleModal.bind(this);
@@ -21,7 +21,7 @@ class SampleModal extends React.Component {
   toggleModal() {
     const { modalIsOpen } = this.state;
     this.setState({
-      modalIsOpen: !modalIsOpen,
+      modalIsOpen: !modalIsOpen
     });
   }
 

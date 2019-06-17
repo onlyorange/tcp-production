@@ -1,12 +1,12 @@
 // @flow
-import React from 'react';
-import Anchor from '../../../../common/atoms/Anchor';
-import styles from '../FooterNavLinksList.style';
-import withStyles from '../../../../common/hoc/withStyles';
+import React from "react";
+import Anchor from "../../../../common/atoms/Anchor";
+import styles from "../FooterNavLinksList.style";
+import withStyles from "../../../../common/hoc/withStyles";
 
 type Props = {
   className: string,
-  listArray: Object[],
+  listArray: Object[]
 };
 
 const FooterNavLinksList = ({ className, listArray }: Props) => {

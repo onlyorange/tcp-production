@@ -1,10 +1,10 @@
-import { call, put, takeLatest } from 'redux-saga/effects';
-import bootstrapAbstractor from '@tcp/core/src/abstractors/global/bootstrap';
-import { loadLayoutData, loadLabelsData } from '../actions';
-import { loadHeaderData } from '../../components/common/organisms/Header/container/Header.actions';
-import { loadFooterData } from '../../components/common/organisms/Footer/container/Footer.actions';
-import { loadModuleDData } from '../../components/common/organisms/ModuleD/container/ModuleD.actions';
-import GLOBAL_CONSTANTS from '../constants';
+import { call, put, takeLatest } from "redux-saga/effects";
+import bootstrapAbstractor from "@tcp/core/src/abstractors/global/bootstrap";
+import { loadLayoutData, loadLabelsData } from "../actions";
+import { loadHeaderData } from "../../components/common/organisms/Header/container/Header.actions";
+import { loadFooterData } from "../../components/common/organisms/Footer/container/Footer.actions";
+import { loadModuleDData } from "../../components/common/organisms/ModuleD/container/ModuleD.actions";
+import GLOBAL_CONSTANTS from "../constants";
 
 function* bootstrap() {
   try {

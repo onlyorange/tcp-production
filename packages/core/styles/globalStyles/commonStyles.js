@@ -1,5 +1,5 @@
-import { css } from 'styled-components';
-import theme from '../themes/TCP';
+import { css } from "styled-components";
+import theme from "../themes/TCP";
 
 const { fonts, breakpoints } = theme;
 export default css`
@@ -14,7 +14,7 @@ export default css`
     margin: 0 auto;
   }
 
-  input[type='text']::-ms-clear {
+  input[type="text"]::-ms-clear {
     display: none;
   }
 

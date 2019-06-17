@@ -1,4 +1,4 @@
-import { ENV_PRODUCTION, ENV_DEVELOPMENT } from '../constants/env.config';
+import { ENV_PRODUCTION, ENV_DEVELOPMENT } from "../constants/env.config";
 
 module.exports = {
   isProduction() {
@@ -6,5 +6,5 @@ module.exports = {
   },
   isDevelopment() {
     return process.env.NODE_ENV === ENV_DEVELOPMENT;
-  },
+  }
 };

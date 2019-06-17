@@ -1,1 +1,1 @@
-export { default, LegalLinksVanilla } from './LegalLinks';
+export { default, LegalLinksVanilla } from "./LegalLinks";

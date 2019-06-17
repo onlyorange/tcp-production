@@ -1,31 +1,37 @@
 // any molecule will come here
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import Grid from '@tcp/core/src/components/common/molecules/Grid';
-import { Anchor, Button, Col, Row, Image } from '@tcp/core/src/components/common/atoms';
-import { Heading } from '@tcp/core/styles/themes/TCP/typotheme';
-import style from './ModuleD.style';
-import withStyles from '../../hoc/withStyles';
+import React from "react";
+import { PropTypes } from "prop-types";
+import Grid from "@tcp/core/src/components/common/molecules/Grid";
+import {
+  Anchor,
+  Button,
+  Col,
+  Row,
+  Image
+} from "@tcp/core/src/components/common/atoms";
+import { Heading } from "@tcp/core/styles/themes/TCP/typotheme";
+import style from "./ModuleD.style";
+import withStyles from "../../hoc/withStyles";
 
 const colSize2Elements = {
   small: 3,
   medium: 4,
   large: 6,
-  xlarge: 6,
+  xlarge: 6
 };
 
 const colSize4Elements = {
   small: 3,
   medium: 3,
   large: 3,
-  xlarge: 3,
+  xlarge: 3
 };
 
 const colSize6Elements = {
   small: 3,
   medium: 3,
   large: 2,
-  xlarge: 2,
+  xlarge: 2
 };
 
 const ignoreGutter = [
@@ -34,13 +40,13 @@ const ignoreGutter = [
   {},
   { small: true, medium: true },
   {},
-  { small: true, medium: true },
+  { small: true, medium: true }
 ];
 
 const ModuleD = ({ className, data }) => {
   const mod = data.data.moduleD;
   let assets = [];
-  let { target, title, text, url, button } = '';
+  let { target, title, text, url, button } = "";
 
   if (mod.value) {
     ({ target, title, text, url } = mod.value[0].value.value);
@@ -75,7 +81,11 @@ const ModuleD = ({ className, data }) => {
       <Row centered>
         {assets &&
           assets.map((item, index) => (
-            <Col key={item.value.name} colSize={colSize} ignoreGutter={ignoreGutter[index]}>
+            <Col
+              key={item.value.name}
+              colSize={colSize}
+              ignoreGutter={ignoreGutter[index]}
+            >
               <div className="moduleD__image-container">
                 <Anchor
                   className="moduleD_textlink"
@@ -105,7 +115,11 @@ const ModuleD = ({ className, data }) => {
 
       <Row centered>
         <Anchor href={button.url} target={button.target}>
-          <Button buttonVariation="variable-width" className="moduleD_button" title={button.title}>
+          <Button
+            buttonVariation="variable-width"
+            className="moduleD_button"
+            title={button.title}
+          >
             {button.text}
           </Button>
         </Anchor>
@@ -116,7 +130,7 @@ const ModuleD = ({ className, data }) => {
 
 ModuleD.propTypes = {
   className: PropTypes.string.isRequired,
-  data: PropTypes.string.isRequired,
+  data: PropTypes.string.isRequired
 };
 
 export default withStyles(ModuleD, style);

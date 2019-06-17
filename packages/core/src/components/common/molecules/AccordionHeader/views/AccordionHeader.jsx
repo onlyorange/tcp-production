@@ -1,16 +1,21 @@
 // @flow
-import React from 'react';
-import styles from '../AccordionHeader.style';
-import withStyles from '../../../hoc/withStyles';
+import React from "react";
+import styles from "../AccordionHeader.style";
+import withStyles from "../../../hoc/withStyles";
 
 type Props = {
   className: string,
   updateAccordionState: Function,
   index: number,
-  titleText: string,
+  titleText: string
 };
 
-const AccordionHeader = ({ className, titleText, updateAccordionState, index }: Props) => {
+const AccordionHeader = ({
+  className,
+  titleText,
+  updateAccordionState,
+  index
+}: Props) => {
   return (
     // eslint-disable-next-line
     <h4

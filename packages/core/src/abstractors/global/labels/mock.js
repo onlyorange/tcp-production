@@ -1,3 +1,3 @@
 export default {
-  connect_with_us: 'CONNECT WITH US:',
+  connect_with_us: "CONNECT WITH US:"
 };

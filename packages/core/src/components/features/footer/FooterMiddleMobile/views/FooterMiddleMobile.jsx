@@ -1,12 +1,12 @@
 // @flow
-import React from 'react';
-import FooterNavLinksList from '../../FooterNavLinksList';
-import AccordionList from '../../../../common/molecules/AccordionList';
-import Col from '../../../../common/atoms/Col';
+import React from "react";
+import FooterNavLinksList from "../../FooterNavLinksList";
+import AccordionList from "../../../../common/molecules/AccordionList";
+import Col from "../../../../common/atoms/Col";
 
 type Props = {
   className: string,
-  navLinkItems: Object[],
+  navLinkItems: Object[]
 };
 
 const FooterMiddleMobile = ({ className, navLinkItems }: Props) => {
@@ -15,7 +15,7 @@ const FooterMiddleMobile = ({ className, navLinkItems }: Props) => {
       colSize={{
         large: 12,
         medium: 8,
-        small: 6,
+        small: 6
       }}
       ignoreGutter={{ small: true, medium: true }}
     >

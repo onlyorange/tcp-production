@@ -1,8 +1,8 @@
-import GLOBAL_CONSTANTS from '../constants';
+import GLOBAL_CONSTANTS from "../constants";
 
 const INITIAL_STATE = {
   labels: {},
-  layout: {},
+  layout: {}
 };
 
 const GlobalReducers = (state = INITIAL_STATE, action) => {

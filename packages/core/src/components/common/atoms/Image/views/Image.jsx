@@ -1,8 +1,8 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import withStyles from '../../../hoc/withStyles';
+import React from "react";
+import { PropTypes } from "prop-types";
+import withStyles from "../../../hoc/withStyles";
 
-import styles from '../Image.style';
+import styles from "../Image.style";
 
 const Image = ({
   className,
@@ -42,15 +42,15 @@ Image.propTypes = {
   placeholderSrc: PropTypes.string,
   alt: PropTypes.string.isRequired,
   inheritedStyles: PropTypes.string,
-  ref: PropTypes.func,
+  ref: PropTypes.func
 };
 
 Image.defaultProps = {
-  srcset: '',
-  sizes: '',
-  placeholderSrc: '',
-  inheritedStyles: '',
-  ref: () => {},
+  srcset: "",
+  sizes: "",
+  placeholderSrc: "",
+  inheritedStyles: "",
+  ref: () => {}
 };
 
 export default withStyles(Image, styles);

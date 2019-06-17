@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 /**
  * @function calculateColumnWidth
@@ -37,7 +37,10 @@ const getColumnWidth = (colCount, breakpoint, gridDimensions) => {
     gridDimensions.columnWidthObj[breakpoint]
   );
   const columnGutter = getGutter(breakpoint, gridDimensions);
-  return parseFloat(columnWidth) * colCount + parseFloat(columnGutter) * (colCount - 1);
+  return (
+    parseFloat(columnWidth) * colCount +
+    parseFloat(columnGutter) * (colCount - 1)
+  );
 };
 
 /**
@@ -50,7 +53,8 @@ const getColumnWidth = (colCount, breakpoint, gridDimensions) => {
  */
 const calculateOffset = (colCount, breakpoint, gridDimensions) => {
   return (
-    getColumnWidth(colCount, breakpoint, gridDimensions) + getGutter(breakpoint, gridDimensions) * 1
+    getColumnWidth(colCount, breakpoint, gridDimensions) +
+    getGutter(breakpoint, gridDimensions) * 1
   );
 };
 
@@ -59,29 +63,41 @@ const StyledCol = css`
     props.theme.gridDimensions.gridBreakPointsKeys.map(
       key => `
       @media ${props.theme.mediaQuery[`${key}Only`]} {
-        ${props.hideCol && props.hideCol[key] ? 'display: none' : ''};
+        ${props.hideCol && props.hideCol[key] ? "display: none" : ""};
       }
       @media ${props.theme.mediaQuery[key]} {
-          ${!props.isNotInlineBlock ? 'display: inline-block' : ''};
+          ${!props.isNotInlineBlock ? "display: inline-block" : ""};
           ${
             !(props.ignoreGutter && props.ignoreGutter[key])
               ? `padding-right: ${getGutter(key, props.theme.gridDimensions)}%`
-              : ''
+              : ""
           };
           margin-left: ${
             props.offsetLeft && props.offsetLeft[key]
-              ? calculateOffset(props.offsetLeft[key], key, props.theme.gridDimensions)
-              : '0'
+              ? calculateOffset(
+                  props.offsetLeft[key],
+                  key,
+                  props.theme.gridDimensions
+                )
+              : "0"
           }%;
           margin-right: ${
             props.offsetRight && props.offsetRight[key]
-              ? calculateOffset(props.offsetRight[key], key, props.theme.gridDimensions)
-              : '0'
+              ? calculateOffset(
+                  props.offsetRight[key],
+                  key,
+                  props.theme.gridDimensions
+                )
+              : "0"
           }%;
-          width: ${getColumnWidth(props.colSize[key], key, props.theme.gridDimensions)}%;
+          width: ${getColumnWidth(
+            props.colSize[key],
+            key,
+            props.theme.gridDimensions
+          )}%;
       }`
     )}
-  ${props => (props.inheritedStyles ? props.inheritedStyles : '')};
+  ${props => (props.inheritedStyles ? props.inheritedStyles : "")};
 `;
 
 export default StyledCol;

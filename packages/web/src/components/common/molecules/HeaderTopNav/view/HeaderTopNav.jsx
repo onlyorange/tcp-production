@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import BrandTabs from '@tcp/web/src/components/common/molecules/BrandTabs';
-import PromotionalArea from '@tcp/web/src/components/common/molecules/PromotionalArea';
-import withStyles from '@tcp/core/src/components/common/hoc/withStyles';
-import HeaderTopNavStyle from '../HeaderTopNav.style';
+import React from "react";
+import PropTypes from "prop-types";
+import BrandTabs from "@tcp/web/src/components/common/molecules/BrandTabs";
+import PromotionalArea from "@tcp/web/src/components/common/molecules/PromotionalArea";
+import withStyles from "@tcp/core/src/components/common/hoc/withStyles";
+import HeaderTopNavStyle from "../HeaderTopNav.style";
 
 const HeaderTopNav = ({ className, dataTopNav }) => (
   <div className={className}>
@@ -22,8 +22,9 @@ const HeaderTopNav = ({ className, dataTopNav }) => (
 
 HeaderTopNav.propTypes = {
   className: PropTypes.string.isRequired,
-  dataTopNav: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number]))
-    .isRequired,
+  dataTopNav: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  ).isRequired
 };
 
 export default withStyles(HeaderTopNav, HeaderTopNavStyle);

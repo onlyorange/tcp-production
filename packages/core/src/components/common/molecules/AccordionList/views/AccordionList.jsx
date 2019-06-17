@@ -1,17 +1,17 @@
 // @flow
-import React from 'react';
-import AccordionItem from '../../AccordionItem';
+import React from "react";
+import AccordionItem from "../../AccordionItem";
 
 type Props = {
   accordionItems: Object[],
   className: string,
   children: Object[],
-  defaultOpenIndex: number,
+  defaultOpenIndex: number
 };
 
 type State = {
   elementClicked: number,
-  isExpanded: boolean,
+  isExpanded: boolean
 };
 
 /**
@@ -35,7 +35,7 @@ export default class AccordionList extends React.Component<Props, State> {
     (this: any).changeAccordianState = this.changeAccordianState.bind(this);
     this.state = {
       elementClicked: props.defaultOpenIndex ? props.defaultOpenIndex : -1,
-      isExpanded: false,
+      isExpanded: false
     };
   }
 
@@ -48,11 +48,16 @@ export default class AccordionList extends React.Component<Props, State> {
 
   changeAccordianState(e: SyntheticKeyboardEvent<*>) {
     // Checking if the click event has happend or a space bar or enter has been pressed.
-    if (e.type === 'click' || (e.type === 'keypress' && (e.which === 13 || e.which === 32))) {
+    if (
+      e.type === "click" ||
+      (e.type === "keypress" && (e.which === 13 || e.which === 32))
+    ) {
       const clickedIndex = e.currentTarget.dataset.index;
       this.setState({
         elementClicked: clickedIndex,
-        isExpanded: !!e.currentTarget.closest('.list-item').getElementsByTagName('a').length,
+        isExpanded: !!e.currentTarget
+          .closest(".list-item")
+          .getElementsByTagName("a").length
       });
     }
   }

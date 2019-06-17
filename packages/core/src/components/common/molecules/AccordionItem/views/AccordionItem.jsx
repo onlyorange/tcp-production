@@ -1,10 +1,10 @@
 // @flow
-import React, { Fragment } from 'react';
-import type { Node } from 'react';
-import AccordionHeader from '../../AccordionHeader';
+import React, { Fragment } from "react";
+import type { Node } from "react";
+import AccordionHeader from "../../AccordionHeader";
 
-import styles from '../AccordionItem.style';
-import withStyles from '../../../hoc/withStyles';
+import styles from "../AccordionItem.style";
+import withStyles from "../../../hoc/withStyles";
 
 type Props = {
   className: string,
@@ -12,7 +12,7 @@ type Props = {
   updateAccordionState: Function,
   index: number,
   children: Node,
-  activeClass: string,
+  activeClass: string
 };
 
 /**
@@ -31,7 +31,7 @@ const AccordionItem = ({
   updateAccordionState,
   index,
   children,
-  activeClass,
+  activeClass
 }: Props) => {
   return (
     <Fragment>

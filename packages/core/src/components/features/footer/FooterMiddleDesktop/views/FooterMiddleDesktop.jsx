@@ -1,11 +1,11 @@
 // @flow
-import React, { Fragment } from 'react';
-import FooterNavLinks from '../../FooterNavLinks';
-import Col from '../../../../common/atoms/Col';
+import React, { Fragment } from "react";
+import FooterNavLinks from "../../FooterNavLinks";
+import Col from "../../../../common/atoms/Col";
 
 type Props = {
   navLinks: Object[],
-  className: string,
+  className: string
 };
 
 const FooterMiddleDesktop = ({ navLinks, className }: Props) => {
@@ -24,17 +24,21 @@ const FooterMiddleDesktop = ({ navLinks, className }: Props) => {
           colSize={{
             large: 2,
             medium: 8,
-            small: 6,
+            small: 6
           }}
         >
           <FooterNavLinks
             className={className}
-            navLinkItems={[{ header: navLinks[i].header, links: navLinks[i].links }]}
+            navLinkItems={[
+              { header: navLinks[i].header, links: navLinks[i].links }
+            ]}
           />
           <FooterNavLinks
             className={className}
             isSubHeader
-            navLinkItems={[{ header: navLinks[i + 1].header, links: navLinks[i + 1].links }]}
+            navLinkItems={[
+              { header: navLinks[i + 1].header, links: navLinks[i + 1].links }
+            ]}
           />
         </Col>
       );
@@ -45,12 +49,14 @@ const FooterMiddleDesktop = ({ navLinks, className }: Props) => {
           colSize={{
             large: 2,
             medium: 8,
-            small: 6,
+            small: 6
           }}
         >
           <FooterNavLinks
             className={className}
-            navLinkItems={[{ header: navLinks[i].header, links: navLinks[i].links }]}
+            navLinkItems={[
+              { header: navLinks[i].header, links: navLinks[i].links }
+            ]}
           />
         </Col>
       );
@@ -63,26 +69,30 @@ const FooterMiddleDesktop = ({ navLinks, className }: Props) => {
         colSize={{
           large: 2,
           medium: 8,
-          small: 6,
+          small: 6
         }}
       >
         <FooterNavLinks
           headerAsImage
           className={className}
-          navLinkItems={[{ header: navLinks[0].header, links: navLinks[0].links }]}
+          navLinkItems={[
+            { header: navLinks[0].header, links: navLinks[0].links }
+          ]}
         />
       </Col>
       <Col
         colSize={{
           large: 2,
           medium: 8,
-          small: 6,
+          small: 6
         }}
       >
         <FooterNavLinks
           headerAsImage
           className={className}
-          navLinkItems={[{ header: navLinks[1].header, links: navLinks[1].links }]}
+          navLinkItems={[
+            { header: navLinks[1].header, links: navLinks[1].links }
+          ]}
         />
       </Col>
       {numberOfNavLinkCols <= 5 ? (
@@ -91,11 +101,11 @@ const FooterMiddleDesktop = ({ navLinks, className }: Props) => {
           colSize={{
             large: 1,
             medium: 8,
-            small: 6,
+            small: 6
           }}
         />
       ) : (
-        ''
+        ""
       )}
       {navLinkColumns}
     </Fragment>

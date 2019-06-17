@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 const accordionStyles = css`
   &.accordion {
@@ -13,7 +13,7 @@ const accordionStyles = css`
     }
   }
   &.active::after {
-    content: '+';
+    content: "+";
     right: 15px;
     position: absolute;
     font-weight: bold;
@@ -22,7 +22,7 @@ const accordionStyles = css`
   }
 
   &.inactive::after {
-    content: '';
+    content: "";
     right: 15px;
     position: absolute;
     background: ${props => props.theme.colors.ACCORDION.COLLAPSE_EXPAND_ICON};

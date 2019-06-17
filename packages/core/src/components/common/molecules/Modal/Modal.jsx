@@ -4,19 +4,19 @@
  *  Other properties of modal to funtion.
  */
 
-import React from 'react';
-import ReactModal from 'react-modal';
-import PropTypes from 'prop-types';
-import Grid from '@tcp/core/src/components/common/molecules/Grid';
-import Row from '@tcp/core/src/components/common/atoms/Row';
-import Col from '@tcp/core/src/components/common/atoms/Col';
-import errorBoundary from '@tcp/core/src/components/common/hoc/errorBoundary';
-import ModalHeader from './ModalHeader';
-import ModalStyle from './ModalStyle';
-import Config from './config';
+import React from "react";
+import ReactModal from "react-modal";
+import PropTypes from "prop-types";
+import Grid from "@tcp/core/src/components/common/molecules/Grid";
+import Row from "@tcp/core/src/components/common/atoms/Row";
+import Col from "@tcp/core/src/components/common/atoms/Col";
+import errorBoundary from "@tcp/core/src/components/common/hoc/errorBoundary";
+import ModalHeader from "./ModalHeader";
+import ModalStyle from "./ModalStyle";
+import Config from "./config";
 
 function getParent() {
-  return document.querySelector('.TCPModal__Wrapper');
+  return document.querySelector(".TCPModal__Wrapper");
 }
 
 const Modal = ({ children, ...otherProps }) => {
@@ -40,7 +40,7 @@ const Modal = ({ children, ...otherProps }) => {
 };
 
 Modal.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element.isRequired
 };
 
 export default errorBoundary(Modal);

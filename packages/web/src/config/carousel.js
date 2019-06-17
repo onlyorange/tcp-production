@@ -1,9 +1,9 @@
-import mediaQuery from '@tcp/core/styles/themes/TCP';
+import mediaQuery from "@tcp/core/styles/themes/TCP";
 
 export default {
   CAROUSEL_OPTIONS: {
     autoplaySpeed: 3000,
-    speed: 500,
+    speed: 500
   },
   CAROUSEL_FADE_OPTIONS: {
     autoplay: true,
@@ -18,9 +18,9 @@ export default {
       {
         breakpoint: mediaQuery.large - 1,
         settings: {
-          arrows: false,
-        },
-      },
-    ],
-  },
+          arrows: false
+        }
+      }
+    ]
+  }
 };

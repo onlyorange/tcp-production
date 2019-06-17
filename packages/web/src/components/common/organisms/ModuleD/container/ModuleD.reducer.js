@@ -1,4 +1,4 @@
-import MODULE_D_CONSTANTS from '../ModuleD.constants';
+import MODULE_D_CONSTANTS from "../ModuleD.constants";
 
 const ModuleDReducer = (state = {}, action) => {
   switch (action.type) {

@@ -1,15 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Row from '@tcp/core/src/components/common/atoms/Row';
-import Col from '@tcp/core/src/components/common/atoms/Col';
-import withStyles from '@tcp/core/src/components/common/hoc/withStyles';
-import FooterMiddleMobile from '@tcp/core/src/components/features/footer/FooterMiddleMobile';
-import FooterMiddleDesktop from '@tcp/core/src/components/features/footer/FooterMiddleDesktop/views';
+import React from "react";
+import PropTypes from "prop-types";
+import Row from "@tcp/core/src/components/common/atoms/Row";
+import Col from "@tcp/core/src/components/common/atoms/Col";
+import withStyles from "@tcp/core/src/components/common/hoc/withStyles";
+import FooterMiddleMobile from "@tcp/core/src/components/features/footer/FooterMiddleMobile";
+import FooterMiddleDesktop from "@tcp/core/src/components/features/footer/FooterMiddleDesktop/views";
 
-import style from '../Footer.style';
-import { LegalLinks, Copyright, SocialMediaLinks } from '../../../molecules';
+import style from "../Footer.style";
+import { LegalLinks, Copyright, SocialMediaLinks } from "../../../molecules";
 
-const Footer = ({ className, copyrightText, legalLinks, navLinks, socialMediaLinks }) => (
+const Footer = ({
+  className,
+  copyrightText,
+  legalLinks,
+  navLinks,
+  socialMediaLinks
+}) => (
   <footer className={className}>
     <div className="footer-top">
       <Row>
@@ -18,7 +24,7 @@ const Footer = ({ className, copyrightText, legalLinks, navLinks, socialMediaLin
           colSize={{
             large: 8,
             medium: 4,
-            small: 6,
+            small: 6
           }}
         />
         <Col
@@ -26,7 +32,7 @@ const Footer = ({ className, copyrightText, legalLinks, navLinks, socialMediaLin
           colSize={{
             large: 4,
             medium: 4,
-            small: 6,
+            small: 6
           }}
         >
           <SocialMediaLinks {...socialMediaLinks} />
@@ -46,7 +52,7 @@ const Footer = ({ className, copyrightText, legalLinks, navLinks, socialMediaLin
           colSize={{
             large: 4,
             medium: 8,
-            small: 6,
+            small: 6
           }}
         >
           <Copyright>{copyrightText}</Copyright>
@@ -56,7 +62,7 @@ const Footer = ({ className, copyrightText, legalLinks, navLinks, socialMediaLin
           colSize={{
             large: 6,
             medium: 8,
-            small: 6,
+            small: 6
           }}
         >
           <LegalLinks links={legalLinks} />
@@ -66,7 +72,7 @@ const Footer = ({ className, copyrightText, legalLinks, navLinks, socialMediaLin
           colSize={{
             large: 2,
             medium: 8,
-            small: 6,
+            small: 6
           }}
         />
       </Row>
@@ -81,20 +87,20 @@ Footer.propTypes = {
   legalLinks: PropTypes.arrayOf(
     PropTypes.shape({
       url: PropTypes.string,
-      title: PropTypes.text,
+      title: PropTypes.text
     })
   ),
   socialMediaLinks: PropTypes.shape({
     icon_class: PropTypes.string,
-    title: PropTypes.string,
-  }),
+    title: PropTypes.string
+  })
 };
 
 Footer.defaultProps = {
-  copyrightText: '',
+  copyrightText: "",
   legalLinks: [],
   navLinks: [],
-  socialMediaLinks: [],
+  socialMediaLinks: []
 };
 
 export default withStyles(Footer, style);

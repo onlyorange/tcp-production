@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 const FooterNavLinksListCss = css`
   list-style-type: none;

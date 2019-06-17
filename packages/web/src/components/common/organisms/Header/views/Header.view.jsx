@@ -1,19 +1,28 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import Row from '@tcp/core/src/components/common/atoms/Row';
-import Col from '@tcp/core/src/components/common/atoms/Col';
-import utilMethods from '@tcp/core/src/utils/utilMethods';
-import HeaderTopNav from '@tcp/web/src/components/common/molecules/HeaderTopNav';
-import config from '../config';
-import headerStyles from '../Header.style';
-import HomeLogo from './HomeLogo';
+import React from "react";
+import { PropTypes } from "prop-types";
+import Row from "@tcp/core/src/components/common/atoms/Row";
+import Col from "@tcp/core/src/components/common/atoms/Col";
+import utilMethods from "@tcp/core/src/utils/utilMethods";
+import HeaderTopNav from "@tcp/web/src/components/common/molecules/HeaderTopNav";
+import config from "../config";
+import headerStyles from "../Header.style";
+import HomeLogo from "./HomeLogo";
 
-const { HeaderBrand, HeaderNav, DummyNav, HeaderPromo, HeaderLoyalty } = headerStyles;
+const {
+  HeaderBrand,
+  HeaderNav,
+  DummyNav,
+  HeaderPromo,
+  HeaderLoyalty
+} = headerStyles;
 const brand = utilMethods.brand();
 
 const Header = ({ className, headerData }) => (
   <header className={className}>
-    <HeaderTopNav className="header-topnav" dataTopNav={headerData.header_top_nav} />
+    <HeaderTopNav
+      className="header-topnav"
+      dataTopNav={headerData.header_top_nav}
+    />
     <HeaderBrand className="header-brand">
       <Row>
         <Col
@@ -21,7 +30,7 @@ const Header = ({ className, headerData }) => (
           colSize={{
             large: 12,
             medium: 8,
-            small: 6,
+            small: 6
           }}
         >
           <HomeLogo
@@ -40,7 +49,7 @@ const Header = ({ className, headerData }) => (
           colSize={{
             large: 12,
             medium: 0,
-            small: 0,
+            small: 0
           }}
         >
           <DummyNav className="dummy-nav">
@@ -65,7 +74,7 @@ const Header = ({ className, headerData }) => (
           colSize={{
             large: 12,
             medium: 8,
-            small: 6,
+            small: 6
           }}
         >
           Promo banners
@@ -79,7 +88,7 @@ const Header = ({ className, headerData }) => (
           colSize={{
             large: 12,
             medium: 8,
-            small: 6,
+            small: 6
           }}
         >
           Loyalty Promo banners
@@ -91,8 +100,9 @@ const Header = ({ className, headerData }) => (
 
 Header.propTypes = {
   className: PropTypes.string.isRequired,
-  headerData: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number]))
-    .isRequired,
+  headerData: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  ).isRequired
 };
 
 export default Header;

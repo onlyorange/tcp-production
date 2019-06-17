@@ -1,1 +1,1 @@
-export { default, SocialMediaLinksVanilla } from './SocialMediaLinks';
+export { default, SocialMediaLinksVanilla } from "./SocialMediaLinks";

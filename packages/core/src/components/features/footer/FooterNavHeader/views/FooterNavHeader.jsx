@@ -1,9 +1,9 @@
 // @flow
-import React from 'react';
-import Anchor from '../../../../common/atoms/Anchor';
-import Image from '../../../../common/atoms/Image';
-import styles from '../FooterNavHeader.style';
-import withStyles from '../../../../common/hoc/withStyles';
+import React from "react";
+import Anchor from "../../../../common/atoms/Anchor";
+import Image from "../../../../common/atoms/Image";
+import styles from "../FooterNavHeader.style";
+import withStyles from "../../../../common/hoc/withStyles";
 
 type Props = {
   className: string,
@@ -12,7 +12,7 @@ type Props = {
   index: number,
   titleText: string,
   titleObj: Object,
-  isSubHeader: boolean,
+  isSubHeader: boolean
 };
 
 const FooterNavHeader = ({
@@ -22,7 +22,7 @@ const FooterNavHeader = ({
   ariaLabel,
   headerAsImage,
   isSubHeader,
-  index,
+  index
 }: Props) => {
   if (!headerAsImage) {
     return (
@@ -36,8 +36,15 @@ const FooterNavHeader = ({
     );
   }
   return (
-    <Anchor to={titleObj.url} className={`${className} img-link`} data-locator={titleObj.url}>
-      <Image alt={titleObj.image_alt} src={`/static/images/${titleObj.image_url}`} />
+    <Anchor
+      to={titleObj.url}
+      className={`${className} img-link`}
+      data-locator={titleObj.url}
+    >
+      <Image
+        alt={titleObj.image_alt}
+        src={`/static/images/${titleObj.image_url}`}
+      />
     </Anchor>
   );
 };

@@ -1,1 +1,1 @@
-export { default } from './ModuleD.container';
+export { default } from "./ModuleD.container";

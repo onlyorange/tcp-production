@@ -1,5 +1,5 @@
-import locators from '../config/locators';
-import icons from '../config/icons';
+import locators from "../config/locators";
+import icons from "../config/icons";
 
 /**
  * This function returns the path of icons in static/images folder
@@ -19,5 +19,5 @@ export const getLocator = locator => {
 
 export default {
   getIconPath,
-  getLocator,
+  getLocator
 };

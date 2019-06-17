@@ -1,8 +1,8 @@
-import layoutAbstractor from '../layout';
-import labelsAbstractor from '../labels';
-import headerAbstractor from '../header';
-import footerAbstractor from '../footer';
-import moduleDAbstractor from '../moduleD';
+import layoutAbstractor from "../layout";
+import labelsAbstractor from "../labels";
+import headerAbstractor from "../header";
+import footerAbstractor from "../footer";
+import moduleDAbstractor from "../moduleD";
 
 /**
  * Responsible for making all the http requests that need to be resolved before loading the application

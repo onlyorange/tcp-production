@@ -1,11 +1,11 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
+import React from "react";
+import { PropTypes } from "prop-types";
 // eslint-disable-next-line
-import Link from 'next/link';
-import { buildUrl } from '../../../../../utils/url';
-import withStyles from '../../../hoc/withStyles';
+import Link from "next/link";
+import { buildUrl } from "../../../../../utils/url";
+import withStyles from "../../../hoc/withStyles";
 
-import styles from '../Anchor.style';
+import styles from "../Anchor.style";
 
 /**
  * @param {object} props : Props for Anchor
@@ -43,7 +43,13 @@ const Anchor = ({
     </a>
   ) : (
     <Link href={to} as={as} shallow={shallow} scroll={scroll}>
-      <a href={as || buildUrl(to)} className={className} title={title} target={target} {...other}>
+      <a
+        href={as || buildUrl(to)}
+        className={className}
+        title={title}
+        target={target}
+        {...other}
+      >
         {children}
       </a>
     </Link>
@@ -59,17 +65,17 @@ Anchor.propTypes = {
   handleLinkClick: PropTypes.func,
   shallow: PropTypes.bool,
   title: PropTypes.string,
-  target: PropTypes.string,
+  target: PropTypes.string
 };
 
 Anchor.defaultProps = {
-  as: '',
-  scroll: '',
+  as: "",
+  scroll: "",
   noLink: false,
   handleLinkClick: () => {},
   shallow: false,
-  title: '',
-  target: '',
+  title: "",
+  target: ""
 };
 
 export default withStyles(Anchor, styles);

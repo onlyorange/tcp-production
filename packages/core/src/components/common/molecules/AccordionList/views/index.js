@@ -1,1 +1,1 @@
-export { default } from './AccordionList';
+export { default } from "./AccordionList";

@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 export default css`
   margin-top: 5px;
@@ -19,7 +19,7 @@ export default css`
 
     &.header-topnav__brand-tabs--activeTab:before,
     &.header-topnav__brand-tabs--activeTab:after {
-      content: '';
+      content: "";
       position: absolute;
       height: 10px;
       width: 20px;

@@ -1,8 +1,8 @@
-import { HOMEPAGE_CONSTANTS } from '../HomePage.constants';
+import { HOMEPAGE_CONSTANTS } from "../HomePage.constants";
 
 const INITIAL_STATE = {
   links: [],
-  eSpots: [],
+  eSpots: []
 };
 
 const HomePageReducer = (state = INITIAL_STATE, action) => {

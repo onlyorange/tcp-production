@@ -1,15 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Image from '@tcp/core/src/components/common/atoms/Image';
-import Anchor from '@tcp/core/src/components/common/atoms/Anchor';
-import withStyles from '@tcp/core/src/components/common/hoc/withStyles';
-import { getIconPath, getLocator } from '@tcp/web/src/utils';
-import style from '../SocialMediaLinks.style';
+import React from "react";
+import PropTypes from "prop-types";
+import Image from "@tcp/core/src/components/common/atoms/Image";
+import Anchor from "@tcp/core/src/components/common/atoms/Anchor";
+import withStyles from "@tcp/core/src/components/common/hoc/withStyles";
+import { getIconPath, getLocator } from "@tcp/web/src/utils";
+import style from "../SocialMediaLinks.style";
 
 const SocialMediaLinks = ({ className, connectWithUsLabel, links }) => (
   <React.Fragment>
     <div className={className}>
-      <span className="social-media-label" data-locator={getLocator('label-connect-with-us')}>
+      <span
+        className="social-media-label"
+        data-locator={getLocator("label-connect-with-us")}
+      >
         {connectWithUsLabel}
       </span>
       <div className="social-media-pallete">
@@ -37,14 +40,14 @@ SocialMediaLinks.propTypes = {
     PropTypes.shape({
       url: PropTypes.string,
       icon_class: PropTypes.string,
-      title: PropTypes.string,
+      title: PropTypes.string
     })
-  ),
+  )
 };
 
 SocialMediaLinks.defaultProps = {
-  connectWithUsLabel: '',
-  links: [],
+  connectWithUsLabel: "",
+  links: []
 };
 
 export { SocialMediaLinks as SocialMediaLinksVanilla };

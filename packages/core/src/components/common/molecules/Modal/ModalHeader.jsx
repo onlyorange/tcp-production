@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import ModalCloseIcon from './ModalCloseIcon';
+import React, { Fragment } from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import ModalCloseIcon from "./ModalCloseIcon";
 
 const Title = styled.h2`
   margin: 0px;
@@ -18,7 +18,7 @@ const ModalHeader = ({ closeFunc, title }) => (
 
 ModalHeader.propTypes = {
   closeFunc: PropTypes.func.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default ModalHeader;

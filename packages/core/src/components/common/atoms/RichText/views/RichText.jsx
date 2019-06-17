@@ -1,8 +1,8 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import withStyles from '../../../hoc/withStyles';
+import React from "react";
+import { PropTypes } from "prop-types";
+import withStyles from "../../../hoc/withStyles";
 
-import styles from '../RichText.style';
+import styles from "../RichText.style";
 
 // This accepts an HTML and inserts it wherever the component is added.
 const RichText = ({ className, richTextHtml, dataLocator }) => (
@@ -17,11 +17,11 @@ const RichText = ({ className, richTextHtml, dataLocator }) => (
 RichText.propTypes = {
   className: PropTypes.string.isRequired,
   richTextHtml: PropTypes.string.isRequired,
-  dataLocator: PropTypes.string,
+  dataLocator: PropTypes.string
 };
 
 RichText.defaultProps = {
-  dataLocator: '',
+  dataLocator: ""
 };
 
 export default withStyles(RichText, styles);

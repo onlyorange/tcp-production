@@ -2,7 +2,7 @@
  * @description - Global config values
  */
 
-import theme from '@tcp/core/styles/themes/TCP';
+import theme from "@tcp/core/styles/themes/TCP";
 
 const { breakpoints } = theme;
 const config = {
@@ -21,8 +21,8 @@ const config = {
           arrows: true,
           infinite: true,
           slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+          slidesToScroll: 1
+        }
       },
       {
         breakpoint: parseInt(breakpoints.large, 10) - 1,
@@ -31,8 +31,8 @@ const config = {
           arrows: true,
           infinite: true,
           slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+          slidesToScroll: 1
+        }
       },
       {
         breakpoint: parseInt(breakpoints.large, 10),
@@ -41,11 +41,11 @@ const config = {
           arrows: true,
           infinite: true,
           slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  },
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }
 };
 
 export default config;

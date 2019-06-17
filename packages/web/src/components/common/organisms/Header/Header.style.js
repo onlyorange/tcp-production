@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const HeaderBrand = styled.div`
   box-sizing: border-box;
@@ -56,7 +56,7 @@ const headerStyles = {
   HeaderNav,
   DummyNav,
   HeaderPromo,
-  HeaderLoyalty,
+  HeaderLoyalty
 };
 
 export default headerStyles;

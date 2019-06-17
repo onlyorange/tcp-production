@@ -1,4 +1,4 @@
-import { isDevelopment } from '@tcp/core/src/utils/util';
+import { isDevelopment } from "@tcp/core/src/utils/util";
 
 /*
    This utility runs web-accessibility on the dom and reports errors on the browser console.
@@ -15,11 +15,13 @@ import { isDevelopment } from '@tcp/core/src/utils/util';
 module.exports = {
   runAccessibility() {
     if (isDevelopment()) {
-      Promise.all([import('react'), import('react-dom'), import('react-axe')]).then(
-        ([React, ReactDOM, axe]) => {
-          axe.default(React, ReactDOM, 1000);
-        }
-      );
+      Promise.all([
+        import("react"),
+        import("react-dom"),
+        import("react-axe")
+      ]).then(([React, ReactDOM, axe]) => {
+        axe.default(React, ReactDOM, 1000);
+      });
     }
-  },
+  }
 };

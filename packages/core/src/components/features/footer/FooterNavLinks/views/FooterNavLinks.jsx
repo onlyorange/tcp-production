@@ -1,14 +1,14 @@
 // @flow
-import React from 'react';
-import FooterNavLinksList from '../../FooterNavLinksList';
-import FooterNavHeader from '../../FooterNavHeader';
+import React from "react";
+import FooterNavLinksList from "../../FooterNavLinksList";
+import FooterNavHeader from "../../FooterNavHeader";
 
 type Props = {
   className: string,
   navLinkItems: Object[],
   updateAccordionState: Function,
   headerAsImage: boolean,
-  isSubHeader: boolean,
+  isSubHeader: boolean
 };
 
 const FooterNavLinks = ({
@@ -16,12 +16,16 @@ const FooterNavLinks = ({
   navLinkItems,
   updateAccordionState,
   headerAsImage,
-  isSubHeader,
+  isSubHeader
 }: Props) => {
   return (
     <div>
       {navLinkItems.map((item, index) => (
-        <div className={`${className} container-nav-link`} key={item.id} data-index={index}>
+        <div
+          className={`${className} container-nav-link`}
+          key={item.id}
+          data-index={index}
+        >
           <FooterNavHeader
             headerAsImage={headerAsImage}
             titleText={item.header.text}
