@@ -102,42 +102,6 @@
   "workspaces": {
     "packages": [
       "packages/*"
-    ],
-    "nohoist": [
-      "mobileapp/react-native",
-      "mobileapp/react-native/**",
-      "mobileapp/react-redux",
-      "mobileapp/react-redux/**",
-      "mobileapp/redux",
-      "mobileapp/redux/**",
-      "mobileapp/redux-saga",
-      "mobileapp/redux-saga/**",
-      "mobileapp/styled-components",
-      "mobileapp/styled-components/**",
-      "mobileapp/react-native-gesture-handler",
-      "mobileapp/react-native-gesture-handler/**",
-      "mobileapp/react-navigation",
-      "mobileapp/react-navigation/**",
-      "mobileapp/react-native-render-html",
-      "mobileapp/react-native-render-html/**",
-      "mobileapp/react-apollo",
-      "mobileapp/react-apollo/**",
-      "mobileapp/aws-appsync",
-      "mobileapp/aws-appsync/**",
-      "mobileapp/aws-appsync-react",
-      "mobileapp/aws-appsync-react/**",
-      "mobileapp/graphql",
-      "mobileapp/graphql/**",
-      "mobileapp/graphql-tag",
-      "mobileapp/graphql-tag/**",
-      "mobileapp/apisauce",
-      "mobileapp/apisauce/**",
-      "mobileapp/apollo-client",
-      "mobileapp/apollo-client/**",
-      "core/superagent",
-      "core/superagent/**",
-      "mobileapp/superagent",
-      "mobileapp/superagent/**"
     ]
   },
   "dependencies": {
